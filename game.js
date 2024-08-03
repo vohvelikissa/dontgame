@@ -3,7 +3,7 @@ const ctx = canvas.getContext("2d");
 var stateOfTheGame = 0;
 var timeUntilGameStarts = 100;
 var backupTime = 100;
-//TODO: Main menu
+var bruhdirection = "down"
 function mainMenuScreen() {
 	ctx.fillStyle = "#000000";
 	console.log("you are supposed to be in main menu");
@@ -15,7 +15,6 @@ function mainMenuScreen() {
 		stateOfTheGame = 2;
 	}
 }
-//TODO: Judgement screen
 function judgementScreen() {
 	ctx.fillStyle = "#000000";
 	console.log("you are supposed to be in judgement screen");
@@ -30,10 +29,14 @@ function judgementScreen() {
 function normalMovementScreen() {
 	ctx.fillStyle = "#000000";
 	console.log("you are supposed to be in normal movement");
-	timeUntilGameStarts = backupTime;
-	stateOfTheGame = 1;
+	//TODO: make the character move
+	const brotherman = document.getElementById("bruhdown");
+	ctx.drawImage(brotherman, 300, 300);
+	//TODO: make the game end
+	//TODO: make the bad stuff spawn
+	//TODO: make the good stuff spawn
+	//TODO: make the prompts
 }
-//TODO: Credit screen
 function creditScreen() {
 	ctx.fillStyle = "#000000";
 	console.log("you are supposed to be in credits screen");
@@ -42,7 +45,6 @@ function creditScreen() {
 	timeUntilGameStarts = backupTime;
 	stateOfTheGame = 0;
 }
-//TODO: screen selector
 function screenSelector() {
 	if(stateOfTheGame == 0) {
 		mainMenuScreen();
