@@ -3,7 +3,19 @@ const ctx = canvas.getContext("2d");
 var stateOfTheGame = 0;
 var timeUntilGameStarts = 100;
 var backupTime = 100;
-var bruhdirection = "down"
+var bruhdirection = "down";
+
+function bruhf(direction) {
+	if(direction == "up") {
+		return document.getElementById("bruhup");
+	} else if (direction == "left") {
+		return document.getElementById("bruhleft");
+	} else if (direction == "down") {
+		return document.getElementById("bruhdown");
+	} else if (direction == "right") {
+		return document.getElementById("bruhright");
+	}
+}
 function mainMenuScreen() {
 	ctx.fillStyle = "#000000";
 	console.log("you are supposed to be in main menu");
@@ -29,8 +41,7 @@ function judgementScreen() {
 function normalMovementScreen() {
 	ctx.fillStyle = "#000000";
 	console.log("you are supposed to be in normal movement");
-	//TODO: make the character move
-	const brotherman = document.getElementById("bruhdown");
+	const brotherman = bruhf(bruhdirection)
 	ctx.drawImage(brotherman, 300, 300);
 	//TODO: make the game end
 	//TODO: make the bad stuff spawn
